@@ -11,7 +11,7 @@ module Enumerable
 
   def filter
     result = []
-    each { |list| result << element if yield(list) }
+    each { |list| result << list if yield(list) }
     result
   end
 end

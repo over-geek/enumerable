@@ -1,7 +1,9 @@
+require_relative 'enumerable'
+
 class MyList
   include Enumerable
 
-  def initialize(list)
+  def initialize(*list)
     @list = list
   end
 
@@ -10,7 +12,7 @@ class MyList
   end
 end
 
-list = MyList.new([1, 2, 3, 4])
+list = MyList.new(1, 2, 3, 4)
 
 puts(list.all? { |e| e < 5 })
 # => true
